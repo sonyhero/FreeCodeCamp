@@ -3,7 +3,7 @@ const createPerson = (name, age, gender) => {
   return {
     name,
     age,
-    gender
+    gender,
   };
   // Only change code above this line
 };
