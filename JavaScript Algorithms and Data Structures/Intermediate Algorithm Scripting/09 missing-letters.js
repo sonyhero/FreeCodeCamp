@@ -4,10 +4,18 @@
 
 
 //("abce") --> "d"
-let str = "abcde"
+let str = "abce"
 
 function pairElement(str) {
-    
+    let arr = str.split('').map(x=>x.codePointAt(0))
+    arr
+    let min
+    let max
+    let newArr = []
+    for (let i = min; i <=max; i++) {
+        newArr.push(i)
+    }
+    return String.fromCodePoint(newArr)
 }
 
 console.log(pairElement(str))
