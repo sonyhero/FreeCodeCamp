@@ -13,7 +13,8 @@ let after = "sitting";
 
 function myReplace(str, before, after) {
     if (before[0].toUpperCase() == before[0] ) {
-        return after[0].toUpperCase() + after.slice(1, after.length)
-    } else return after[0].toLowerCase() + after.slice(1, after.length)
+        after = after[0].toUpperCase() + after.slice(1, after.length)
+    } else after = after[0].toLowerCase() + after.slice(1, after.length)
+    return str.replace(before, after)
 }
 console.log(myReplace (str, before, after))
