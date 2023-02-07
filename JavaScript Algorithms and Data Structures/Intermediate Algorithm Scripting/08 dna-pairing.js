@@ -9,8 +9,13 @@
 let str = "ATCGA"
 
 function pairElement(str) {
-    let arr = str.split('')
-    return arr;
+    let pairs = {
+        "A": ["A","T"],
+        "T": ["T","A"],
+        "C": ["C","G"],
+        "G": ["G","C"],
+    }
+    return str.split('').map(x=>pairs[x])
   }
   
 console.log( pairElement(str))
