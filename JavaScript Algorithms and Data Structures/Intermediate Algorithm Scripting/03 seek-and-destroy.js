@@ -13,7 +13,7 @@ destroyer([1, 2, 3, 1, 2, 3], 2, 3) --> [1,1]
 
 
 function destroyer(arr,...arg) {
-  return arr
+  return arr.filter(x=>!arg.includes(x))
   
 }
 
