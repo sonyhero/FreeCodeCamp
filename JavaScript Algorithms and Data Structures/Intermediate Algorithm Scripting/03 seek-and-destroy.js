@@ -10,11 +10,8 @@ Note: You have to use the arguments object.
 destroyer([1, 2, 3, 1, 2, 3], 2, 3) --> [1,1]
 */
 
-
-
-function destroyer(arr,...arg) {
-  return arr.filter(x=>!arg.includes(x))
-  
+function destroyer(arr, ...arg) {
+    return arr.filter(x => !arg.includes(x))
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
