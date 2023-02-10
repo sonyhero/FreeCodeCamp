@@ -8,7 +8,15 @@
 */
 
 function sumPrimes(num) {
-    return num;
+    let arr = [];
+    nextPrime:
+    for (let i = 2; i <= num; i++) { // Для всех i...
+
+        for (let j = 2; j < i; j++) { // проверить, делится ли число..
+            if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+        }
+        arr.push(i)
+    } return arr.reduce((a, b) => a + b)
 }
 
 console.log(sumPrimes(10))
