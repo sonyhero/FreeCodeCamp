@@ -11,6 +11,12 @@ Check the assertion tests for examples.
 
 //uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
 
-function uniteUnique(arr) {
-    return arr;
+function uniteUnique(...arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i].join(' '))
+    }
+    return Array.from(new Set(newArr.join(' ').split(' ').map(x=>+x)))
 }
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
