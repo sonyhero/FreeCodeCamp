@@ -13,8 +13,26 @@ Waiting:convertHTML("<>") should return the string &lt;&gt;.
 Waiting:convertHTML("abc") should return the string abc.
 */
 
+/*
+& = &amp;
+< = &lt;
+> = &gt;
+" = &quot;
+' = &apos;
+*/
+
 function convertHTML(str) {
-    return str;
+    return str.split('').map(x=>{
+        switch (x) {
+            case '&' : return x = '&amp;';
+            case '<' : return x = '&lt;';
+            case '>' : return x = '&gt;';
+            case '\"' : return x = '&quot;';
+            case '\'' : return x = '&apos;';
+                default: return x
+                
+        }
+    }).join('')
 }
 
 
