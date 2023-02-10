@@ -12,10 +12,18 @@ Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a strin
 Например, sumFibs(10) должно вернуть 10, потому что все нечетные числа Фибоначчи, меньшие или равные 10, равны 1, 1, 3 и 5.
 */
 
-function sumFibs(num) {
-    return num;
+function sumFibs(n) {
+    let a = 1;
+    let b = 1;
+    let arr = [a, b];
+    let c;
+    for (let i = 3; i <= n; i++) {
+        c = a + b;
+        arr.push(c);
+        a = b;
+        b = c;  
+    }
+        return arr.filter(x=>x%2==1).filter(x=> x<=n).reduce((a,b)=>a+b)
 }
-
-
 
 console.log(sumFibs(4))
