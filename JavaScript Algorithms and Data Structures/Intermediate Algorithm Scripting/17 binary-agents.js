@@ -6,7 +6,7 @@ The binary string will be space separated.
 */
 
 function binaryAgent(str) {
-  return str;
+  return str.split(' ').map(x=>parseInt(x, 2)).map(x=>String.fromCodePoint(x)).join('')
 }
 
 console.log(
