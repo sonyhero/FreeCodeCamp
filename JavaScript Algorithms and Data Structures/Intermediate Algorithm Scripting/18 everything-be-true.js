@@ -8,8 +8,14 @@
 Помните, что для доступа к свойствам объекта можно использовать либо точечную нотацию, либо нотацию [].*/
 
 function truthCheck(collection, pre) {
+    let count = 0
     let arr = collection.map(x=>x=x[pre]);
-  return arr
+    for (let i = 0; i < arr.length; i++) {
+        if (Boolean(arr[i]) == Boolean(arr[arr.length-1])) {
+            count++
+        }
+    }
+  return (count == arr.length ) ? true : false
 }
 
 
